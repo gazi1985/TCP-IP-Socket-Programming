@@ -1,0 +1,4 @@
+g++ -g -c -o testobj.o testobj.cc //编译obj文件
+ar rv libtest.a testobj.o //创建libtest.a静态库，由testobj.o组成
+make //run makefile 
+./main  //run app

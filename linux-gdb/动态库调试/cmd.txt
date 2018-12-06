@@ -1,0 +1,15 @@
+g++ -g -c -fPIC -o testobj.o testobj.cc
+g++ -g -shared -o libtest.so testobj.o
+sudo cp libtest.so /lib/libtest.so
+
+
+gdb main
+(gdb) b TestObj  //设置断点位置 TestObj
+(gdb) r
+...
+ run main function
+...运行到断点TestObj
+(gdb) s //Signle step单步进入
+(gdb) bt //列出调用栈
+(gdb) info sharedlibrary
+(gdb) list
